@@ -1,0 +1,52 @@
+html.darkTheme.static
+  head
+    title Tic Tac Toe
+    meta(name="viewport", content='width=device-width, initial-scale=1.0')
+    link(rel="stylesheet", href="css/index.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300")
+    link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Francois+One')
+    script(type ='text/javascript', src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")  
+    script(type='text/javascript', src="/index.js") 
+  body
+    header
+      h2 Tic Tac Toe
+    button#theme Change Theme    
+    #main
+      #first.default
+      #second.default
+      #third.default
+      #fourth.default
+      #fivth.default
+      #sixth.default
+      #seventh.default
+      #eight.default
+      #nine.default
+    #buttons
+      button#oneB Switch to 2 Players
+      button#oB Switch to Circle
+    #scoreboard
+      table
+        thead
+          tr
+            th Index    
+            th Player One
+            th Computer
+        tbody
+          tr
+            td Games Won 
+            td 0
+            td 0     
+          tr
+            td Games Lost   
+            td 0 
+            td 0 
+          tr
+            td Games Tied
+            td(colspan="2")#Tie 0  
+      #totalGames
+        h5 Total number of Games
+        p 0  
+
+
+
+         
