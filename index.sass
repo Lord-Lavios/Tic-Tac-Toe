@@ -1,0 +1,258 @@
+$border: 1px solid black
+$Switch2player: lighten(#4527A0,25)
+$Switch2Circle: lighten(#1565C0,20)
+$theme: lighten(#0288D1,10) 
+$BgColorButton: darken(grey,25)  
+$BgColorHtml: #272D3E
+@import 'darktheme'
+@import 'brighttheme'
+
+@-webkit-keyframes hover
+  0% 
+    background-color: $BgColorButton  
+  100% 
+    background-color: $Switch2player
+
+@-webkit-keyframes hoverSecond
+  0% 
+    background-color: $BgColorButton
+  100% 
+    background-color: $theme  
+
+@-webkit-keyframes hoverThird
+  0% 
+    background-color: $BgColorButton  
+  100% 
+    background-color: $Switch2Circle
+
+@-webkit-keyframes changeColor     
+  0%
+    color: white
+  60%
+    color: #32F183 
+  80%
+    color: white
+  100%
+    color: #32F183    
+
+@-webkit-keyframes changeColorRed     
+  0%
+    color: #E32121
+  20%
+    color: white
+  40%
+    color: #E32121   
+  60%
+    color: white
+  80%
+    color: #E32121
+  100%
+    color: white    
+
+
+#oneB
+  &:hover
+    -webkit-animation: hover 0.7s forwards  
+
+#oB
+  &:hover
+    -webkit-animation: hoverThird 0.7s forwards
+
+#theme
+  &:hover
+    -webkit-animation: hoverThird 0.7s forwards    
+
+.static
+  body
+    margin: 0px
+    padding: 0px
+
+  h2
+    font-size: 62px
+    text-align: center
+    padding: 20px
+    word-spacing: 5px
+    letter-spacing: 2px
+    font-family: 'Roboto', sans-serif
+    font-weight: 100
+    margin: 0px
+    color: white
+
+  html
+    margin: 0px
+    padding: 0px 
+    background-color: $BgColorHtml
+
+  .endMessage
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 10000
+    background-color: black
+    -webkit-filter: blur(0px)
+
+  #pEndMessage
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 60px
+    color: #14A0F9
+    font-family: 'Francois One', sans-serif
+    letter-spacing: 8px
+    margin: 0px
+    -webkit-filter: blur(0px)
+
+  #first,#second,#third,#fourth ,#fivth,#sixth,#seventh,#eight,#nine
+    display: flex
+    justify-content: center
+    position: relative
+    align-items: center
+    box-sizing: border-box
+    float: left
+    width: 33%
+    height: 33.3333%
+    z-index: 1000
+
+  .default
+    background-color: darken(white,3)
+    cursor: pointer
+
+  .changeKid  
+    font-size: 96px
+    font-family: trebuchet ms
+    color: #2196F3
+
+  .change  
+    background-color: lighten(#272D3E,5)
+    transform: rotateY(180deg)
+    transition: transform 0.6s
+    cursor: default
+
+  .hidden
+    -webkit-filter: blur(10px)
+
+  #buttons
+    box-sizing: border-box
+    text-align: center
+    margin-top: 25px
+
+  #main
+    position: relative
+    width: 600px
+    height: 600px
+    margin: 0 auto
+    margin-top: 20px
+    z-index: 1
+
+  #oneB,#xB,#oB
+    border: $border
+    font-size: 18px
+    opacity: 0.7
+    cursor: pointer
+    background-color: $BgColorButton
+    font-family: 'Roboto', sans-serif
+    letter-spacing: 2px
+    margin: 0px 5px 0px 5px
+    padding: 10px 25px 10px 25px   
+    color: white
+
+  #theme
+    border: $border
+    font-size: 18px
+    opacity: 0.7
+    cursor: pointer
+    background-color: $BgColorButton
+    font-family: 'Roboto', sans-serif
+    letter-spacing: 2px
+    margin: 25px 10px 0px 10px
+    padding: 10px 25px 10px 25px    
+    color: white 
+
+  @media (max-width: 650px)
+    #main
+      width: 460px
+      height: 460px  
+
+    #scoreboard
+      width: 95%
+
+    #oneB,#oB
+      width: 100%
+      margin-bottom: 10px  
+      margin-left: 0px  
+
+    #oneB
+      &:active
+        -webkit-animation: hover 0.7s forwards  
+
+    #oB
+      &:active
+        -webkit-animation: hoverThird 0.7s forwards
+
+    #theme
+      width: 100%  
+      margin-left: 0px  
+      &:active 
+        -webkit-animation: hoverSecond 0.7s forwards 
+
+  @media (max-width: 450px) 
+    #main
+      width: 350px
+      height: 350px
+
+    #oneB, #oB
+      width: 100%
+      margin-bottom: 10px  
+      margin-left: 0px   
+
+    #oneB
+      &:active
+        -webkit-animation: hover 0.7s forwards  
+
+    #oB
+      &:active
+        -webkit-animation: hoverThird 0.7s forwards
+
+    #theme
+      width: 100%  
+      margin-left: 0px
+      &:active  
+        -webkit-animation: hoverSecond 0.7s forwards
+
+    h2
+      font-size: 56px  
+
+    .changeKid
+      font-size: 72px 
+
+  @media (max-width: 350px) 
+    #main
+      width: 300px
+      height: 300px
+
+    #oneB, #oB
+      width: 100%
+      margin-bottom: 10px  
+      margin-left: 0px   
+      font-size: 16px
+
+    #oneB
+      &:active
+        -webkit-animation: hover 0.7s forwards  
+
+    #oB
+      &:active
+        -webkit-animation: hoverThird 0.7s forwards
+
+    #theme
+      width: 100%  
+      margin-left: 0px 
+      &:active 
+        -webkit-animation: hoverSecond 0.7s forwards
+
+    h2
+      font-size: 46px  
+
+    .changeKid
+      font-size: 62px            
