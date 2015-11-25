@@ -185,6 +185,7 @@
   -webkit-animation: hoverThird 0.7s forwards; }
 
 .static body {
+  overflow-x: hidden;
   margin: 0px;
   padding: 0px; }
 .static h2 {
