@@ -6,12 +6,14 @@
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<link rel="stylesheet" href="/index.css"/>
+<link rel="stylesheet" href="css/index.css"/>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300"/>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Francois+One"/>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+</script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"> 
 </script>
 <script type="text/javascript" src="/index.js"> 
 </script>
@@ -51,30 +53,34 @@
 </div>
 </div>
 
-<div id="buttons"><button id="oneB">Switch to 2 Players</button><button id="oB">Switch to Circle</button>
+<div id="buttons"><button id="oneB">Switch to 2 Players</button><button id="oB">Switch to Circle</button><button id="switchTurns">Switch First Turn</button>
 </div>
 
 <div id="scoreboard">
 <table>
 <thead>
 <tr>
-<th>Index    
+<th>Players    
 </th>
-<th>Player One
+<th>Games Won
 </th>
-<th>Computer
+<th>Games Lost
+</th>
+<th>Games Tied
 </th>
 </tr></thead><tbody>
 <tr>
-<td>Games Won 
+<td>Player One
 </td>
 <td>0
 </td>
-<td>0     
+<td>0 
+</td>
+<td rowspan="2" id="Tie"> 0    
 </td>
 </tr>
 <tr>
-<td>Games Lost   
+<td>Computer
 </td>
 <td>0 
 </td>
@@ -82,17 +88,14 @@
 </td>
 </tr>
 <tr>
-<td>Games Tied
-</td>
-<td colspan="2" id="Tie">0  
+<th colspan="4">Total number of Games
+</th>
+</tr>
+<tr> 
+<td id="games" colspan="4">0
 </td>
 </tr></tbody>
 </table>
-
-<div id="totalGames"><h5>Total number of Games</h5>
-
-<p>0  </p>
-</div>
 </div>
 </body>
 </html>
