@@ -269,7 +269,7 @@
   padding: 10px 25px 10px 25px;
   color: white;
   width: 280px; }
-  button:focus {
+  #oneB:focus, #oB, #switchTurns {
    background-image: none;
   outline: 0;
   -webkit-box-shadow: none;
