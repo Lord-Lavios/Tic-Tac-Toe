@@ -269,7 +269,13 @@
   padding: 10px 25px 10px 25px;
   color: white;
   width: 280px; }
-@media (max-width: 750px) {
+  button:focus {
+   background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+   box-shadow: none;
+}
+@media (max-width: 750px){
   .static #switchTurns {
     margin-top: 10px; } }
 @media (max-width: 650px) {
