@@ -35,17 +35,16 @@
   width: 600px;
   height: 200px;
   margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   font-family: Trebuchet MS;
-  box-sizing: border-box;
-  border: 1px solid white; }
+  box-sizing: border-box; }
 .darkTheme table {
   width: 100%;
-  height: 70%;
+  height: 90%;
   color: white;
   box-sizing: border-box;
-  border-bottom: 1px solid white;
+  border: 1px solid white;
   border-collapse: collapse; }
 .darkTheme td {
   text-align: center;
@@ -53,43 +52,22 @@
   letter-spacing: 2px; }
 .darkTheme th {
   background-color: #272D3E;
-  width: 33.3%;
+  width: 25%;
   padding: 5px;
   font-size: 16px;
+  font-weight: 100;
   font-family: "Roboto", sans-serif;
   letter-spacing: 2px; }
 .darkTheme tr:nth-child(1) {
-  background-color: #4FD286; }
+  background-color: #3169DA; }
 .darkTheme tr:nth-child(2) {
-  background-color: #D2613E; }
-.darkTheme tr:nth-child(3) {
-  background-color: #37CFBB; }
+  background-color: #c96140; }
+.darkTheme tr:nth-child(4) {
+  background-color: #3169DA; }
+.darkTheme #Tie {
+  background-color: #4ac77e; }
 .darkTheme tr {
   margin-top: 0px; }
-.darkTheme #totalGames {
-  margin: 0px;
-  width: 100%;
-  height: 30%; }
-.darkTheme h5 {
-  margin: 0px;
-  text-align: center;
-  box-sizing: border-box;
-  color: white;
-  padding: 6px;
-  border-bottom: 1px solid white;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  letter-spacing: 2px;
-  background-color: #272D3E; }
-.darkTheme p {
-  text-align: center;
-  margin: 0px;
-  padding: 5px;
-  color: white;
-  background-color: #807aed;
-  border-bottom: 1px solid white;
-  font-family: "Roboto", sans-serif; }
 
 .brightTheme body {
   background-color: white; }
@@ -128,61 +106,37 @@
   width: 600px;
   height: 200px;
   margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  font-family: Trebuchet MS;
-  box-sizing: border-box;
-  border: 1px solid black; }
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-family: Trebuchet MS; }
 .brightTheme table {
   width: 100%;
-  height: 70%;
+  height: 90%;
   color: white;
   box-sizing: border-box;
-  border-bottom: 1px solid black;
+  border: 1px solid black;
   border-collapse: collapse; }
 .brightTheme td {
   text-align: center;
   font-family: "Roboto", sans-serif;
   letter-spacing: 2px; }
 .brightTheme th {
-  background-color: #272D3E;
-  width: 33.3%;
+  background-color: #3b445d;
+  width: 25%;
   padding: 5px;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   letter-spacing: 2px; }
 .brightTheme tr:nth-child(1) {
-  background-color: #4FD286; }
+  background-color: #3169DA; }
 .brightTheme tr:nth-child(2) {
-  background-color: #D2613E; }
-.brightTheme tr:nth-child(3) {
-  background-color: #37CFBB; }
+  background-color: #c96140; }
+.brightTheme tr:nth-child(4) {
+  background-color: #3169DA; }
+.brightTheme #Tie {
+  background-color: #4ac77e; }
 .brightTheme tr {
   margin-top: 0px; }
-.brightTheme #totalGames {
-  margin: 0px;
-  width: 100%;
-  height: 30%; }
-.brightTheme h5 {
-  margin: 0px;
-  text-align: center;
-  box-sizing: border-box;
-  color: white;
-  padding: 6px;
-  border-bottom: 1px solid black;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  letter-spacing: 2px;
-  background-color: #272D3E; }
-.brightTheme p {
-  text-align: center;
-  margin: 0px;
-  padding: 5px;
-  color: white;
-  background-color: #807aed;
-  border-bottom: 1px solid black;
-  font-family: "Roboto", sans-serif; }
 
 @-webkit-keyframes hover {
   0% {
@@ -221,7 +175,7 @@
     color: #E32121; }
   100% {
     color: white; } }
-#oneB:hover {
+#oneB:hover, #switchTurns:hover {
   -webkit-animation: hover 0.7s forwards; }
 
 #oB:hover {
@@ -247,24 +201,6 @@
   margin: 0px;
   padding: 0px;
   background-color: #272D3E; }
-.static .endMessage {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 10000;
-  background-color: black;
-  -webkit-filter: blur(0px); }
-.static #pEndMessage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
-  color: #14A0F9;
-  font-family: "Francois One", sans-serif;
-  letter-spacing: 8px;
-  margin: 0px;
-  -webkit-filter: blur(0px); }
 .static #first, .static #second, .static #third, .static #fourth, .static #fivth, .static #sixth, .static #seventh, .static #eight, .static #nine {
   display: flex;
   justify-content: center;
@@ -274,7 +210,7 @@
   float: left;
   width: 33%;
   height: 33.3333%;
-  z-index: 1000; }
+  z-index: 1; }
 .static .default {
   background-color: #f7f7f7;
   cursor: pointer; }
@@ -290,9 +226,16 @@
 .static .hidden {
   -webkit-filter: blur(10px); }
 .static #buttons {
-  box-sizing: border-box;
-  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
   margin-top: 25px; }
+.static .form {
+  position: relative;
+  z-index: 100000;
+  text-align: center;
+  margin-top: 50px; }
+.static p {
+  text-align: center; }
 .static #main {
   position: relative;
   width: 600px;
@@ -300,16 +243,19 @@
   margin: 0 auto;
   margin-top: 20px;
   z-index: 1; }
-.static #oneB, .static #xB, .static #oB {
+.static button {
+  box-sizing: border-box;
   border: 1px solid black;
-  font-size: 18px;
+  width: 32.66667%;
+  font-size: 16px;
   opacity: 0.7;
   cursor: pointer;
+  text-align: center;
   background-color: #404040;
   font-family: "Roboto", sans-serif;
   letter-spacing: 2px;
-  margin: 0px 5px 0px 5px;
-  padding: 10px 25px 10px 25px;
+  margin: 0px 1.0px 0px 1.0px;
+  padding: 10px 0px 10px 0px;
   color: white; }
 .static #theme {
   border: 1px solid black;
@@ -321,16 +267,23 @@
   letter-spacing: 2px;
   margin: 25px 10px 0px 10px;
   padding: 10px 25px 10px 25px;
-  color: white; }
+  color: white;
+  width: 280px; }
+@media (max-width: 750px) {
+  .static #switchTurns {
+    margin-top: 10px; } }
 @media (max-width: 650px) {
   .static #main {
     width: 460px;
     height: 460px; }
   .static #scoreboard {
     width: 95%; }
-  .static #oneB, .static #oB {
+  .static #buttons {
+    width: 100%; }
+  .static #oneB, .static #oB, .static #switchTurns {
     width: 100%;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 8px;
     margin-left: 0px; }
   .static #oneB:active {
     -webkit-animation: hover 0.7s forwards; }
@@ -340,14 +293,18 @@
     width: 100%;
     margin-left: 0px; }
     .static #theme:active {
-      -webkit-animation: hoverSecond 0.7s forwards; } }
-@media (max-width: 450px) {
+      -webkit-animation: hoverSecond 0.7s forwards; }
+  .static .changeKid {
+    font-size: 72px; } }
+@media (max-width: 490px) {
   .static #main {
     width: 350px;
     height: 350px; }
-  .static #oneB, .static #oB {
+  .static #buttons {
+    width: 100%; }
+  .static #oneB, .static #oB, .static #switchTurns {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     margin-left: 0px; }
   .static #oneB:active {
     -webkit-animation: hover 0.7s forwards; }
@@ -361,16 +318,22 @@
   .static h2 {
     font-size: 56px; }
   .static .changeKid {
-    font-size: 72px; } }
+    font-size: 56px; }
+  .static th {
+    font-size: 14px; }
+  .static td {
+    font-size: 12px; } }
 @media (max-width: 350px) {
   .static #main {
     width: 300px;
     height: 300px; }
-  .static #oneB, .static #oB {
+  .static #oneB, .static #oB, .static #switchTurns {
     width: 100%;
     margin-bottom: 10px;
     margin-left: 0px;
     font-size: 16px; }
+  .static #buttons {
+    width: 100%; }
   .static #oneB:active {
     -webkit-animation: hover 0.7s forwards; }
   .static #oB:active {
@@ -382,5 +345,9 @@
       -webkit-animation: hoverSecond 0.7s forwards; }
   .static h2 {
     font-size: 46px; }
+  .static th {
+    font-size: 15px; }
+  .static td {
+    font-size: 13px; }
   .static .changeKid {
-    font-size: 62px; } }
+    font-size: 46px; } }
