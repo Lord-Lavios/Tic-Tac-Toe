@@ -305,7 +305,8 @@
   .static #oneB, .static #oB, .static #switchTurns {
     width: 100%;
     margin-bottom: 8px;
-    margin-left: 0px; }
+    margin-left: 0px;
+    margin-right: 0px; }
   .static #oneB:active {
     -webkit-animation: hover 0.7s forwards; }
   .static #oB:active {
@@ -315,6 +316,8 @@
     margin-left: 0px; }
     .static #theme:active {
       -webkit-animation: hoverSecond 0.7s forwards; }
+  .static #scoreboard, .static table {
+    width: 100%; }
   .static h2 {
     font-size: 56px; }
   .static .changeKid {
