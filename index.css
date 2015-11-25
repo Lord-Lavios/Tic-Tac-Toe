@@ -209,6 +209,10 @@
   box-sizing: border-box;
   float: left;
   width: 33%;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   height: 33.3333%;
   z-index: 1; }
 .static .default {
