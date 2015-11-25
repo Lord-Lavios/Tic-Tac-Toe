@@ -1,6 +1,10 @@
+:focus {
+  outline: none;
+}
 .darkTheme body {
   background-color: #272D3E; }
 .darkTheme header {
+  width: 100%;
   background-color: #272D3E;
   color: black;
   border-bottom: 1px solid black; }
@@ -72,6 +76,7 @@
 .brightTheme body {
   background-color: white; }
 .brightTheme header {
+  width: 100%;
   background-color: #03A9F4;
   color: white;
   border-bottom: 0px; }
@@ -186,6 +191,7 @@
 
 .static body {
   margin: 0px;
+  overflow-x: none;
   padding: 0px; }
 .static h2 {
   font-size: 62px;
@@ -213,8 +219,7 @@
   z-index: 1; }
 .static #first:focus, .static #second:focus, .static #third:focus, .static #fourth:focus, .static #fivth:focus, .static #sixth:focus, .static #seventh:focus, .static #eight:focus, .static #nine
 :focus {
-  background-image: none;
-  outline: 0;
+  
 }  
 .static .default {
   background-color: #f7f7f7;
@@ -234,11 +239,6 @@
   max-width: 800px;
   margin: 0 auto;
   margin-top: 25px; }
-.static .form {
-  position: relative;
-  z-index: 100000;
-  text-align: center;
-  margin-top: 50px; }
 .static p {
   text-align: center; }
 .static #main {
@@ -288,20 +288,26 @@
     width: 460px;
     height: 460px; }
   .static #scoreboard {
-    width: 95%; }
+    width: 650px; }
   .static #buttons {
-    width: 100%; }
+    width: 650px; }
   .static #oneB, .static #oB, .static #switchTurns {
-    width: 100%;
+    width: 650px
     margin-top: 0px;
     margin-bottom: 8px;
     margin-left: 0px; }
+  .darkTheme header {
+    width: 650px;
+  }
+  .brighttheme header {
+    width: 650px;
+  }
   .static #oneB:active {
     -webkit-animation: hover 0.7s forwards; }
   .static #oB:active {
     -webkit-animation: hoverThird 0.7s forwards; }
   .static #theme {
-    width: 100%;
+    width: 650px
     margin-left: 0px; }
     .static #theme:active {
       -webkit-animation: hoverSecond 0.7s forwards; }
@@ -312,23 +318,29 @@
     width: 350px;
     height: 350px; }
   .static #buttons {
-    width: 100%; }
+    width: 490px; }
   .static #oneB, .static #oB, .static #switchTurns {
-    width: 100%;
+    width: 490px;
     margin-bottom: 8px;
     margin-left: 0px;
     margin-right: 0px; }
+  .darkTheme header {
+    width: 490px;
+  }
+  .brighttheme header {
+    width: 490px;
+  }    
   .static #oneB:active {
     -webkit-animation: hover 0.7s forwards; }
   .static #oB:active {
     -webkit-animation: hoverThird 0.7s forwards; }
   .static #theme {
-    width: 100%;
+    width: 490px;
     margin-left: 0px; }
     .static #theme:active {
       -webkit-animation: hoverSecond 0.7s forwards; }
   .static #scoreboard, .static table {
-    width: 100%; }
+    width: 490px; }
   .static h2 {
     font-size: 56px; }
   .static .changeKid {
@@ -342,19 +354,25 @@
     width: 300px;
     height: 300px; }
   .static #oneB, .static #oB, .static #switchTurns {
-    width: 100%;
+    width: 350px;
     margin-bottom: 10px;
     margin-left: 0px;
     font-size: 16px; }
   .static #buttons {
-    width: 100%; }
+    width: 350px; }
   .static #oneB:active {
     -webkit-animation: hover 0.7s forwards; }
   .static #oB:active {
     -webkit-animation: hoverThird 0.7s forwards; }
   .static #theme {
-    width: 100%;
+    width: 350px;
     margin-left: 0px; }
+  .darkTheme header {
+    width: 350px;
+  }
+  .brighttheme header {
+    width: 350px;
+  }    
     .static #theme:active {
       -webkit-animation: hoverSecond 0.7s forwards; }
   .static h2 {
