@@ -49,20 +49,16 @@ function changeTurns() {
    $("#switchTurns").click(function() {
       if (turnCheck === 0) {
          if(playerOne.firstTurn === 1)  {
-            console.log("This 1");
             playerOne.firstTurn = 0;
             playerTwo.firstTurn = 1;
             turnCheck = 1;
             nukeIt();
-            console.log(turnCheck);
          }
       } else {
-         console.log("This 2");
          playerOne.firstTurn = 1;
          playerTwo.firstTurn = 0;
          turnCheck = 0;
          nukeIt();
-         console.log(turnCheck);
       }
    });
 };
@@ -313,24 +309,18 @@ function logic() {
                something++;
                if (something === 2 && squares.indexOf(winningCombos[a][0]) != -1) {
                   priority = 1;
-                  console.log("Winning Worked 1");
-                  alert(winningCombos[a][0]);
                   $("body").find("div").eq(winningCombos[a][0] + 1).click();
                   b = winningCombos[a].length;
                   a = winningCombos.length;
                   break;
                } else if (something === 2 && squares.indexOf(winningCombos[a][1]) != -1) {
                   priority = 1;
-                  console.log("Winning Worked 2 ");
-                  alert(winningCombos[a][1]);
                   $("body").find("div").eq(winningCombos[a][1] + 1).click();
                   b = winningCombos[a].length;
                   a = winningCombos.length;
                   break;
                } else if (something === 2 && squares.indexOf(winningCombos[a][2]) != -1) {
                   priority = 1;
-                  console.log("Winning Worked 3");
-                  alert(winningCombos[a][2]);
                   $("body").find("div").eq(winningCombos[a][2] + 1).click();
                   b = winningCombos[a].length;
                   a = winningCombos.length;
@@ -350,21 +340,18 @@ function logic() {
                something++;
                if (something === 2 && squares.indexOf(winningCombos[c][0]) != -1) {
                   priority = 1;
-                  console.log("Blocking Worked 1");
                   $("body").find("div").eq(winningCombos[c][0] + 1).click();
                   d = winningCombos[c].length;
                   c = winningCombos.length;
                   break;
                } else if (something === 2 && squares.indexOf(winningCombos[c][1]) != -1) {
                   priority = 1;
-                  console.log("Blocking Worked 2");
                   $("body").find("div").eq(winningCombos[c][1] + 1).click();
                   d = winningCombos[c].length;
                   c = winningCombos.length;
                   break;
                } else if (something === 2 && squares.indexOf(winningCombos[c][2]) != -1) {
                   priority = 1;
-                  console.log("Blocking Worked 3");
                   $("body").find("div").eq(winningCombos[c][2] + 1).click();
                   d = winningCombos[c].length;
                   c = winningCombos.length;
@@ -381,14 +368,12 @@ function logic() {
          playerOne.boxes.indexOf(2) != -1 && squares.indexOf(4) != -1 && turn === 1 ||
          playerOne.boxes.indexOf(6) != -1 && squares.indexOf(4) != -1 && turn === 1 ||
          playerOne.boxes.indexOf(8) != -1 && squares.indexOf(4) != -1 && turn === 1) {
-         console.log("Center Worked " + priority);
          priority = 1;
          $("#fivth").click();
       } else if (playerOne.boxes.indexOf(1) != -1 && squares.indexOf(4) != -1 && turn > 2 ||
          playerOne.boxes.indexOf(3) != -1 && squares.indexOf(4) != -1 && turn > 2 ||
          playerOne.boxes.indexOf(5) != -1 && squares.indexOf(4) != -1 && turn > 2 ||
          playerOne.boxes.indexOf(7) != -1 && squares.indexOf(4) != -1 && turn > 2) {
-         console.log("Center Worked turn > 1");
          priority = 1;
          $("#fivth").click();
       };
@@ -398,35 +383,26 @@ function logic() {
          if (turn === 1) {
             if (playerOne.boxes.indexOf(1) != -1) {
                priority = 1;
-               console.log("Corner 1 ");
                randomCorner <= 2 ? $("#first").click() : $("#third").click();
             } else if (squares.indexOf("X") === -1 && squares.indexOf("O") === -1) {
                priority = 1;
-               console.log("Corner 5 Random");
                if (randomCorner === 1) {
-                  console.log("Did 1");
                   $("#first").click();
                } else if (randomCorner === 2) {
-                  console.log("Did 2");
                   $("#third").click();
                } else if (randomCorner === 3) {
-                  console.log("Did 3");
                   $("#seventh").click();
                } else if (randomCorner === 4) {
-                  console.log("Did 4");
                   $("#nine").click();
                }
             } else if (playerOne.boxes.indexOf(3) != -1) {
                priority = 1;
-               console.log("Corner 2");
                randomCorner <= 2 ? $("#first").click() : $("#seventh").click();
             } else if (playerOne.boxes.indexOf(5) != -1) {
                priority = 1;
-               console.log("Corner 3 ");
                randomCorner <= 2 ? $("#third").click() : $("#nine").click();
             } else if (playerOne.boxes.indexOf(7) != -1) {
                priority = 1;
-               console.log("Corner 4 ");
                randomCorner <= 2 ? $("#seventh").click() : $("#nine").click();
             }
          }
@@ -437,19 +413,15 @@ function logic() {
          playerOne.boxes.indexOf(2) != -1 && playerOne.boxes.indexOf(6) != -1) {
          if (randomCorner === 1) {
             priority = 1;
-            console.log("Block Fork Worked Second" + priority);
             $("#second").click();
          } else if (randomCorner === 2) {
             priority = 1;
-            console.log("Block Fork Worked Third" + priority);
             $("#sixth").click();
          } else if (randomCorner === 3) {
             priority = 1;
-            console.log("Block Fork Worked eight" + priority);
             $("#eight").click();
          } else if (randomCorner === 4) {
             priority = 1;
-            console.log(randomCorner + " Block Fork Worked third" + priority);
             $("#fourth").click();
          };
       };
@@ -460,19 +432,15 @@ function logic() {
       if (turn >= 4) {
          if (squares.indexOf(1) != -1) {
             priority = 1;
-            console.log("emptyEdge Worked! 1");
             $("#second").click();
          } else if (squares.indexOf(3) != -1) {
             priority = 1;
-            console.log("emptyEdge Worked! 2");
             $("#fourth").click();
          } else if (squares.indexOf(5) != -1) {
             priority = 1;
-            console.log("emptyEdge Worked! 3");
             $("#sixth").click();
          } else if (squares.indexOf(7) != -1) {
             priority = 1;
-            console.log("emptyEdge Worked! 4");
             $("#eight").click();
          }
       }
@@ -483,19 +451,15 @@ function logic() {
       if (turn >= 3) {
          if (playerOne.boxes.indexOf(0) === -1 && squares.indexOf(0) != -1 || playerTwo.boxes.indexOf(0) === -1 && squares.indexOf(0) != -1) {
             priority = 1;
-            console.log("emprtCorner worked 1");
             $("#first").click();
          } else if (playerOne.boxes.indexOf(2) === -1 && squares.indexOf(2) != -1 || playerTwo.boxes.indexOf(2) === -1 && squares.indexOf(2) != -1) {
             priority = 1;
-            console.log("emprtCorner worked 2");
             $("#third").click();
          } else if (playerOne.boxes.indexOf(6) === -1 && squares.indexOf(6) != -1 || playerTwo.boxes.indexOf(6) === -1 && squares.indexOf(6) != -1) {
             priority = 1;
-            console.log("emprtCorner worked 3");
             $("#seventh").click();
          } else if (playerOne.boxes.indexOf(8) === -1 && squares.indexOf(8) != -1 || playerTwo.boxes.indexOf(8) === -1 && squares.indexOf(8) != -1) {
             priority = 1;
-            console.log("emprtCorner worked 4");
             $("#nine").click();
          }
       }
@@ -513,7 +477,6 @@ function logic() {
             var checkLength = playerTwo.boxes.length;
             if (squares.indexOf(m) != -1 && squares.indexOf(m) != -1) {
                playerTwo.boxes.push(m);
-               console.log("Respective m position added  " + playerTwo.boxes);
                dummyWinning();
             }
 
@@ -524,7 +487,6 @@ function logic() {
                   for (var f = 0; f < winningCombos[e].length; f++) {
                      if (playerTwoDomain.indexOf(winningCombos[e][f]) != -1) {
                         something = 0;
-                        console.log("Removed  " + winningCombos[e]);
                         if (innerCheck === e) {
                            ways--;
                         }
@@ -533,13 +495,11 @@ function logic() {
                      if (playerTwo.boxes.indexOf(winningCombos[e][f]) != -1) {
                         something++;
                         if (something === 2) {
-                           console.log("check this - " + winningCombos[e]);
                            ways++;
                            var innerCheck = e
                         }
                         if (ways === 2) {
                            playerTwo.boxes.pop()
-                           console.log("Did somebody click? = " + ways + " " + m + " " + playerTwo.boxes)
                            nextMove = m;
                            e = winningCombos.length 
                            f = 3;
@@ -556,7 +516,6 @@ function logic() {
          if (nextMove != undefined) {
             priority = 1
             $("body").find("div").eq(nextMove + 1).click();
-            console.log("I win! Forked!" + " move was - " + nextMove);
          };
       }
    };
