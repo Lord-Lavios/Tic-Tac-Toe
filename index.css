@@ -185,7 +185,6 @@
   -webkit-animation: hoverThird 0.7s forwards; }
 
 .static body {
-  overflow-x: hidden;
   margin: 0px;
   padding: 0px; }
 .static h2 {
@@ -212,12 +211,6 @@
   width: 33%;
   height: 33.3333%;
   z-index: 1; }
-  .static #first:focus, .static #second:focus, .static #third:focus, .static #fourth:focus, .static #fivth:focus, .static #sixth:focus, .static #seventh:focus, .static #eight:focus, .static #nine:focus {
-  -webkit-appearance: none;
-  outline: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  }
 .static .default {
   background-color: #f7f7f7;
   cursor: pointer; }
