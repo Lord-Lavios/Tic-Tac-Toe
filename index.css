@@ -217,7 +217,9 @@
   z-index: 1; }
 .static #first:focus, .static #second:focus, .static #third:focus, .static #fourth:focus, .static #fivth:focus, .static #sixth:focus, .static #seventh:focus, .static #eight:focus, .static #nine
 :focus {
-  
+ outline-style:none;
+box-shadow:none;
+border-color:transparent;
 }  
 .static .default {
   background-color: #f7f7f7;
