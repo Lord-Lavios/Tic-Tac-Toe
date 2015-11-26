@@ -312,7 +312,8 @@ border-color:transparent;
     -webkit-animation: hoverThird 0.7s forwards; }
   .static #theme {
     width: 100%;
-    margin-left: 0px; }
+    margin-left: 0px;
+    margin-right: 0px;}
     .static #theme:active {
       -webkit-animation: hoverSecond 0.7s forwards; }
   .static .changeKid {
@@ -340,7 +341,9 @@ border-color:transparent;
     -webkit-animation: hoverThird 0.7s forwards; }
   .static #theme {
     width: 100%;;
-    margin-left: 0px; }
+    margin-left: 0px; 
+    margin-right: 0px;
+  }
     .static #theme:active {
       -webkit-animation: hoverSecond 0.7s forwards; }
   .static #scoreboard, .static table {
@@ -370,6 +373,7 @@ border-color:transparent;
     -webkit-animation: hoverThird 0.7s forwards; }
   .static #theme {
     width: 100%;
+    margin-right: 0px;
     margin-left: 0px; }
   .darkTheme header {
     width: 100%;
