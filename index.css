@@ -217,7 +217,7 @@
   z-index: 1; }
 .static #first:focus, .static #second:focus, .static #third:focus, .static #fourth:focus, .static #fivth:focus, .static #sixth:focus, .static #seventh:focus, .static #eight:focus, .static #nine
 :focus {
- outline-style:none;
+outline-style:none;
 box-shadow:none;
 border-color:transparent;
 }  
@@ -349,7 +349,7 @@ border-color:transparent;
     font-size: 14px; }
   .static td {
     font-size: 12px; } }
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   .static #main {
     width: 300px;
     height: 300px; }
