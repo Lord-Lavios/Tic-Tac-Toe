@@ -188,7 +188,8 @@
 
 .static body {
   margin: 0px;
-  overflow-x: none;
+  overflow-x: hidden;
+  min-width: 100vw;
   padding: 0px; }
 .static h2 {
   font-size: 62px;
@@ -202,6 +203,8 @@
   color: white; }
 .static html {
   -webkit-tap-highlight-color:transparent;
+  min-width: 100vw;
+    overflow-x: hidden;
   margin: 0px;
   padding: 0px;
   background-color: #272D3E; }
@@ -212,7 +215,7 @@
   align-items: center;
   box-sizing: border-box;
   float: left;
-  width: 33%;
+  width: 33.3333%;
   height: 33.3333%;
   z-index: 1; }
 .static #first:focus, .static #second:focus, .static #third:focus, .static #fourth:focus, .static #fivth:focus, .static #sixth:focus, .static #seventh:focus, .static #eight:focus, .static #nine
