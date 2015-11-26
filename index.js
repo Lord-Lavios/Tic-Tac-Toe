@@ -168,7 +168,8 @@ function checkWhereClick() {
                $(this).removeClass('default').addClass('change');
                $(this).append(playerOne.value);
                turn++;
-               playerOne.value === xClass ? (playerOne.boxes.push($(this).index()), squares[$(this).index()] = "X") : (playerTwo.boxes.push($(this).index()), squares[$(this).index()] = "O")
+               playerOne.boxes.push($(this).index())
+               squares[$(this).index()] = playerOne.getNotation();
                setTimeout(function() {
                   logic()
                }, 180); //As if computer Clicked!
@@ -176,7 +177,8 @@ function checkWhereClick() {
                $(this).removeClass('default').addClass('change');
                console.log($(this));
                $(this).append(playerTwo.value);
-               playerTwo.value === xClass ? (playerTwo.boxes.push($(this).index()), squares[$(this).index()] = "X") : (playerTwo.boxes.push($(this).index()), squares[$(this).index()] = "O")
+               playerTwo.boxes.push($(this).index())
+               squares[$(this).index()] = playerTwo.getNotation();
                turn++;
             };
          } else {
