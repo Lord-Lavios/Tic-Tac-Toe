@@ -222,6 +222,7 @@
 :focus {
 outline-style:none;
 box-shadow:none;
+outline:0;
 border-color:transparent;
 }  
 .static .default {
