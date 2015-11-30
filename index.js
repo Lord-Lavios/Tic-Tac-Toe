@@ -11,7 +11,6 @@ var winningCombos = [
 ];
 var xClass = "<h1 class = changeKid>X</h1>";
 var oClass = "<h1 class = changeKid>O</h1>";
-var details = "<div class = form><p>Enter Your Name</p><br<input type = text name = fullname><br><input id = namer type = submit value = Set Name></div>"
 //Object for players
 function player(theValue, theName, thePersonality,theFirstTurn) {
    this.value = theValue;
@@ -175,7 +174,6 @@ function checkWhereClick() {
                }, 180); //As if computer Clicked!
             } else if (turn % 2 != 0 && $(this).hasClass("change") === false && priority != null) {
                $(this).removeClass('default').addClass('change');
-               console.log($(this));
                $(this).append(playerTwo.value);
                playerTwo.boxes.push($(this).index())
                squares[$(this).index()] = playerTwo.getNotation();
@@ -486,7 +484,6 @@ function logic() {
          var nextMove = undefined;
          for (var m = 0; m < squares.length; m++) {
             ways = 0;
-            console.log(playerTwo.boxes + "Before anything added to boxes");
             var checkLength = playerTwo.boxes.length;
             if (squares.indexOf(m) != -1 && squares.indexOf(m) != -1) {
                playerTwo.boxes.push(m);
@@ -494,7 +491,6 @@ function logic() {
             }
 
             function dummyWinning() {
-               console.log("Moves - " + m);
                for (var e = 0; e < winningCombos.length; e++) {
                   var something = 0;
                   for (var f = 0; f < winningCombos[e].length; f++) {
