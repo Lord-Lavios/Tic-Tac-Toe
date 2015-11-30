@@ -407,6 +407,16 @@ function logic() {
                priority = 1;
                randomCorner <= 2 ? $("#seventh").click() : $("#nine").click();
             }
+         } else if(turn === 1 && playerOne.firstTurn === 1) {
+            if (randomCorner === 1) {
+                  $("#first").click();
+               } else if (randomCorner === 2) {
+                  $("#third").click();
+               } else if (randomCorner === 3) {
+                  $("#seventh").click();
+               } else if (randomCorner === 4) {
+                  $("#nine").click();
+               }
          }
       }
       //Blocking a Fork
@@ -464,7 +474,7 @@ function logic() {
             priority = 1;
             $("#nine").click();
          }
-      }
+      } 
    };
 
    //Forking
