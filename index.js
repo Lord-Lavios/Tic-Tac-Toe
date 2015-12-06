@@ -244,7 +244,7 @@ function didSomebodyWin() {
                $("body").find("div").eq(winningCombos[k][2] + 1).children().css('-webkit-animation', 'changeColor 0.8s 1');
                   $("td").eq(1).html(++playerOne.won);
                   $("td").eq(6).html(++playerTwo.lose);
-                  winning = 1;
+                  winningCheckGame = 1;
                $("#games").html(++noOfGames);
                setTimeout(function() {
                   nukeIt()
@@ -266,7 +266,7 @@ function didSomebodyWin() {
                $("body").find("div").eq(winningCombos[q][2] + 1).children().css('-webkit-animation', 'changeColor 0.8s 1');
                   $("td").eq(5).html(++playerTwo.won);
                   $("td").eq(2).html(++playerOne.lose);
-                  winning = 1;
+                  winningCheckGame = 1;
                $("#games").html(++noOfGames);
                setTimeout(function() {
                   nukeIt()
@@ -276,7 +276,7 @@ function didSomebodyWin() {
       }
    }
 
-   if (playerOne.boxes.length + playerTwo.boxes.length === 9 && winning === 0) {
+   if (playerOne.boxes.length + playerTwo.boxes.length === 9 && winningCheckGame === 0) {
       $("div:eq(1),div:eq(2),div:eq(3),div:eq(4),div:eq(5),div:eq(6),div:eq(7),div:eq(8),div:eq(9)").children().css('-webkit-animation', 'changeColorRed 0.8s 1');
       $("#games").html(++noOfGames);
       $("#Tie").html(++tied);
