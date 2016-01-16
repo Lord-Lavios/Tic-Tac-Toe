@@ -160,8 +160,8 @@ function twoPlayers() {
 
 //Check Click and apply O or X
 function checkWhereClick() {
-   if (stop === 0) {
       $("#main").children().click(function() {
+         if (stop === 0) {
          if (playerTwo.personality === "Computer") {
             if (turn % 2 === 0 && $(this).hasClass("change") === false) {
                $(this).removeClass('default').addClass('change');
@@ -195,8 +195,8 @@ function checkWhereClick() {
             };
          };
          didSomebodyWin();
+      }
       });
-   }
 };
 
 //Reset - Back to defaults!
