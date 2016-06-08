@@ -161,39 +161,38 @@ function twoPlayers() {
 //Check Click and apply O or X
 function checkWhereClick() {
       $("#main").children().click(function() {
-         if (stop === 0) {
-         if (playerTwo.personality === "Computer") {
-            if (turn % 2 === 0 && $(this).hasClass("change") === false) {
-               $(this).removeClass('default').addClass('change');
-               $(this).append(playerOne.value);
-               turn++;
-               playerOne.boxes.push($(this).index())
-               squares[$(this).index()] = playerOne.getNotation();
-               setTimeout(function() {
-                  logic()
-               }, 180); //As if computer Clicked!
-            } else if (turn % 2 != 0 && $(this).hasClass("change") === false && priority != null) {
-               $(this).removeClass('default').addClass('change');
-               $(this).append(playerTwo.value);
-               playerTwo.boxes.push($(this).index())
-               squares[$(this).index()] = playerTwo.getNotation();
-               turn++;
+         if (stop === 0 && turn <= 8) {
+            if (playerTwo.personality === "Computer") {
+               if (turn % 2 === 0 && $(this).hasClass("change") === false) {
+                  $(this).removeClass('default').addClass('change');
+                  $(this).append(playerOne.value);
+                  turn++;
+                  playerOne.boxes.push($(this).index())
+                  squares[$(this).index()] = playerOne.getNotation();
+                  setTimeout(function() {
+                     logic()
+                  }, 180); //As if computer Clicked!
+               } else if (turn % 2 != 0 && $(this).hasClass("change") === false && priority != null) {
+                  $(this).removeClass('default').addClass('change');
+                  $(this).append(playerTwo.value);
+                  playerTwo.boxes.push($(this).index())
+                  squares[$(this).index()] = playerTwo.getNotation();
+                  turn++;
+               };
+            } else {
+               if (turn % 2 === 0 && $(this).hasClass("change") === false) {
+                  $(this).removeClass('default').addClass('change');
+                  $(this).append(playerOne.value);
+                  turn = 1;
+                  playerOne.boxes.push($(this).index())
+               } else if (turn % 2 != 0 && $(this).hasClass("change") === false) {
+                  $(this).removeClass('default').addClass('change');
+                  $(this).append(playerTwo.value);
+                  turn = 0;
+                  //pushes the index of the square clicked, to the respective array
+                  playerTwo.boxes.push($(this).index())
+               };
             };
-         } else {
-            if (turn % 2 === 0 && $(this).hasClass("change") === false) {
-               $(this).removeClass('default').addClass('change');
-               $(this).append(playerOne.value);
-               turn = 1;
-               playerOne.boxes.push($(this).index())
-
-            } else if (turn % 2 != 0 && $(this).hasClass("change") === false) {
-               $(this).removeClass('default').addClass('change');
-               $(this).append(playerTwo.value);
-               turn = 0;
-               //pushes the index of the square clicked, to the respective array
-               playerTwo.boxes.push($(this).index())
-            };
-         };
          didSomebodyWin();
       }
       });
